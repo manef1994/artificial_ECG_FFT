@@ -5,7 +5,7 @@ from scipy.fft import fft, fftfreq
 # == initializing the variables to use
 ECG = []
 
-# == the part of the signal before the P
+# == the part of the signal before P
 x = np.linspace(0, 3.1416, 100)
 for i in range(10):
     ECG.append(0)
@@ -45,6 +45,8 @@ for i in range(10):
 N = len(ECG)
 yf = fft(ECG)
 xf = fftfreq(N, 512)
+
+# == plotting the results
 
 fig, axs = plt.subplots(2,1)
 axs[0].plot(ECG)
